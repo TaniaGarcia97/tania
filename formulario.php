@@ -46,8 +46,10 @@
 
         if (empty($errores)) {
             session_start();
-            $_SESSION["nombre"] = $_POST['nombre'];
-            
+            $_SESSION["nombre"] = $nombre;
+            $_SESSION['email'] = $email;
+            $_SESSION['edad'] = $edad;
+            $_SESSION['pais'] = $pais;
             header("location: informacion.php");
             exit();
         } else {
@@ -111,11 +113,11 @@
         <p> 
             <select name="pais" id="pais" class="<?php echo $error_pais; ?>">
                 <option value="">Escoge un país</option>
-                <option value="ES">España</option>
-                <option value="FR">Francia</option>
-                <option value="DE">Alemania</option>
-                <option value="CH">China</option>
-                <option value="IE">Irlanda</option>
+                <option value="España">España</option>
+                <option value="Francia">Francia</option>
+                <option value="Alemania">Alemania</option>
+                <option value="China">China</option>
+                <option value="Irlanda">Irlanda</option>
             </select>
         </p>
         <input type="submit" value="Enviar">
