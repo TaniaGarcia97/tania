@@ -1,7 +1,7 @@
 <?php
     session_start();
 
-    echo "Tu nombre es:" . $_SESSION["nombre"] . " tu email: " . $_SESSION["email"] . " tu edad es: " . $_SESSION['edad'] . " y tu país es: " . $_SESSION["pais"];
+    echo "Tu nombre es: " . $_SESSION["nombre"] . " tu email: " . $_SESSION["email"] . " tu edad es: " . $_SESSION['edad'] . " y tu país es: " . $_SESSION["pais"];
 ?>
 <!DOCTYPE html>
 <html lang="es">
